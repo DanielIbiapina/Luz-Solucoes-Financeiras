@@ -2,7 +2,7 @@ import { AuthenticatedRequest, Response } from "express";
 import assetService from "../services/asset-service";
 
 export async function listAsset(req: AuthenticatedRequest, res: Response) {
-  const { name } = req.body;
+  const { name } = req.query;
   try {
     const data = await assetService.getAsset(name);
 
