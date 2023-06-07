@@ -1,0 +1,26 @@
+{
+  "name": "luz-solucoes-financeiras",
+  "version": "1.0.0",
+  "description": "Back-end do conjunto de APIs para precificação de ativos ilíquidos.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:load-envs": "dotenv -e .env.development",
+    "dev:migration:run": "npm run dev:load-envs npx prisma migrate deploy",
+    "dev:migration:generate": "npm run dev:load-envs npx prisma migrate dev",
+    "dev:seed": "npm run dev:load-envs prisma db seed",
+    "dev": "NODE_ENV=development nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
+    "prisma:seed": "npx prisma db seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielIbiapina/Luz-Solucoes-Financeiras.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielIbiapina/Luz-Solucoes-Financeiras/issues"
+  },
+  "homepage": "https://github.com/DanielIbiapina/Luz-Solucoes-Financeiras#readme"
+}
